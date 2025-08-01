@@ -1,0 +1,25 @@
+pixar:
+  outputs:
+    dev:
+      database: DBT_DEV
+      driver: ODBC Driver 17 for SQL Server
+      host: ketabruce.noip.me
+      password: "{{ env_var('KETAWIN11_SQLSERVER_DBT_PASSWORD') }}"
+      port: 1433
+      schema: dbo
+      threads: 1
+      trust_cert: true
+      type: sqlserver
+      user: dbt
+    prod:
+      database: DBT_PROD
+      driver: ODBC Driver 17 for SQL Server
+      host: ketabruce.noip.me
+      password: "{{ env_var('KETAWIN11_SQLSERVER_DBT_PASSWORD') }}"
+      port: 1433
+      schema: dbo
+      threads: 1
+      trust_cert: true
+      type: sqlserver
+      user: dbt
+  target: dev
