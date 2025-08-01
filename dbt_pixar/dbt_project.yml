@@ -1,0 +1,29 @@
+
+name: 'pixar'
+version: '1.0.0'
+
+profile: 'pixar'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+seeds:
+  pixar:
+    schema: seed
+
+models:
+  pixar:
+    dw:
+      +schema: dw
+      +materialized: table
+    stage:
+      +schema: stage
+      +materialized: table
