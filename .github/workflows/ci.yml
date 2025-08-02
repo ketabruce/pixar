@@ -28,3 +28,9 @@ jobs:
 
       - name: DBT debug
         run: cd dbt_pixar; dbt debug
+
+      - name: Print IPs
+        run: ifconfig
+
+      - name: Start Dagster
+        run: cd dagster_pixar; dagster dev
