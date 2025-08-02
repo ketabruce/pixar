@@ -27,4 +27,4 @@ jobs:
         run: sh odbc_install.sh
 
       - name: DBT debug
-        run: dbt debug
+        run: cd dbt_pixar; dbt debug
