@@ -21,7 +21,7 @@ jobs:
         run: pip install dbt-core dbt-sqlserver dagster dagster-cloud dagster-dbt
 
       - name: Install dbt dependencies
-        run: dbt deps
+        run: cd dbt_pixar; dbt deps
 
       - name: Install ODBC for MSSQL
         run: sh odbc_install.sh
