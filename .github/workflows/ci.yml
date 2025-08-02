@@ -1,0 +1,30 @@
+name: ci
+on:
+  #push:
+    #branches: [ "main" ]
+  #pull_request:
+    #branches: [ "main" ]
+
+  workflow_dispatch:
+
+env:
+  KETAWIN11_SQLSERVER_DBT_PASSWORD: ${{ secrets.KETAWIN11_SQLSERVER_DBT_PASSWORD }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install requirements
+        run: pip install dbt-core dbt-sqlserver dagster dagster-cloud dagster-dbt
+
+      - name: Install dbt dependencies
+        run: dbt deps
+
+      - name: Install ODBC for MSSQL
+        run: sh odbc_install.sh
+
+      - name: DBT debug
+        run: dbt debug
