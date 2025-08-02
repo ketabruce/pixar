@@ -6,7 +6,7 @@ sudo dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb
 
 sudo apt-get update
-sudo ACCEPT_EULA=Y apt-get install -y msodbcsql17
+sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y apt-get install -y mssql-tools
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
