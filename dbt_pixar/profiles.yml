@@ -2,7 +2,7 @@ pixar:
   outputs:
     dev:
       database: DBT_DEV
-      driver: ODBC Driver 17 for SQL Server
+      driver: ODBC Driver 18 for SQL Server
       host: ketabruce.noip.me
       password: "{{ env_var('KETAWIN11_SQLSERVER_DBT_PASSWORD') }}"
       port: 1433
@@ -13,7 +13,7 @@ pixar:
       user: dbt
     prod:
       database: DBT_PROD
-      driver: ODBC Driver 17 for SQL Server
+      driver: ODBC Driver 18 for SQL Server
       host: ketabruce.noip.me
       password: "{{ env_var('KETAWIN11_SQLSERVER_DBT_PASSWORD') }}"
       port: 1433
