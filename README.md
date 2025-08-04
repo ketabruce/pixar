@@ -1,1 +1,2 @@
-dbt representation of the Pixar sample film data from https://mavenanalytics.io/data-playground
+- dbt representation of the Pixar sample film data from https://mavenanalytics.io/data-playground
+- now you can use dagster_pixar to orchestrate dbt project from http://localhost:3000/
