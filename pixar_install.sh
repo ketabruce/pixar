@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Install python packages
-pipx install dbt-core dbt-sqlserver
-pipx install dagster dagster-cloud dagster-dbt dagster-webserver
+pipx install --include-deps dbt-core dbt-sqlserver
+pipx install --include-deps dagster dagster-cloud dagster-dbt dagster-webserver
 
 # Install MSSQL ODBC drives
 sh ./odbc_install.sh
