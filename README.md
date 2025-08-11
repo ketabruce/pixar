@@ -1,2 +1,3 @@
 - dbt representation of the Pixar sample film data from https://mavenanalytics.io/data-playground
 - now you can use dagster_pixar to orchestrate dbt project from http://localhost:3000/
+- added terraform script to setup and run solution on an AWS EC2 machine which will be accessible according to terraform output: http://[ec2_public_ip]:3000/
